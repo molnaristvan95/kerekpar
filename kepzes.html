@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Program made: 2023.05.18. 01:46 -->
+
+<head>
+  <meta name="description" content="Kerékpár képzés Hervis">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Molnár István || Мельник Степан">
+  <meta name="keywords" content="">
+  <meta name="theme-color" content="#050">
+  <title>Kerékpár képzés Hervis</title>
+  <style rel="stylesheet" type="text/css">
+    *:root {
+      font-size: 16px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body#main {
+      margin: 0;
+      padding: 0;
+      background: #000;
+    }
+
+    body>* {
+      color: #ffab;
+    }
+
+    a {
+      color: #ff9;
+    }
+
+    hr {
+      width: 50%;
+      margin: 8px 0;
+      border-color: #ff0;
+    }
+
+    i {
+      color: #0f0;
+    }
+
+    b {
+      color: #f00;
+    }
+
+    li {
+      color: #0ff;
+    }
+
+    nav {
+      position: fixed;
+      right: 4px;
+      bottom: 4px;
+      border: 1px solid gold;
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    nav>* {
+      display: block;
+      margin: 4px auto;
+      text-align: center;
+      color: #0ff;
+      background: #0009;
+    }
+
+    summary {
+      border: solid 1px #0000;
+      border-bottom-color: #9f0;
+    }
+
+    .content {
+      margin: 32px;
+    }
+
+    details>a {
+      display: block;
+      padding: 4px;
+      margin: 4px auto;
+      text-indent: 32px;
+      color: #0ff;
+    }
+
+    details>a::before {
+      content: '* ';
+      vertical-align: middle;
+    }
+
+  </style>
+  <base target="_self">
+</head>
+
+<body id="main">
+  <var id="variable" style="display:none; zoom:2; position:fixed; top:0;">-</var>
+  <nav>
+    <a href="#top">Top ↑</a>
+    <a href="#" onclick="obj.open();">Open all</a>
+    <a href="#" onclick="obj.close();">Close all</a>
+  </nav>
+  <h1 align="center">Kerékpár képzés
+    <br>
+    <small>Hervis</small>
+  </h1>
+  <details class="content">
+    <summary>Tartalomjegyzék
+      <small>[Linkek]</small>
+    </summary>
+    <a href="#kormany">Kormány</a>
+    <a href="#valto">Váltó</a>
+    <a href="#villa">Villa</a>
+    <a href="#elsokerek">Első kerék</a>
+    <a href="#vaz">Váz</a>
+    <a href="#nyereg">Nyereg</a>
+    <a href="#hatsokerek">Hátsó kerék</a>
+    <a href="#fek">Fékrendszer</a>
+    <a href="#kieg">Kiegészítők</a>
+  </details>
+  <details id="kormany" class="content">
+    <summary>Kormány</summary>
+    <p>A kormányt több komponens alkotja.
+      <i>(A listában a vonalig minden kötelező elem.)</i>
+    </p>
+    <ul>
+      <li>Fék
+        <i>V-fék / Patkófék / Tárcsa-bowdennel / Hidraulikus-tárcsa</i>
+      </li>
+      <li>Csengő
+        <i>Olykor forgatható a kallantyú. Lehet egyszólamú, vagy többszólamú.</i>
+        <b>A csengőt nem helyettesíti a duda!</b>
+      </li>
+      <li>Pírzma
+        <i>Fehér színű</i>
+      </li>
+      <li>Markolat
+        <i>Szivacs / Gumi (utóbbi esetleg tenyértámasszal vagy szarvval)</i>
+      </li>
+      <hr>
+      <li>Váltó
+        <i>Marokváltó / Pillangóváltó / Fékváltó / Fékkarváltó</i>
+      </li>
+      <li>Sebességmérő
+        <i>Vezetékes / vezetéknélküli</i>
+      </li>
+      <li>Telefontartó
+        <i>Alumínium / gumitok
+          <small>vízálló</small>
+        </i>
+      </li>
+      <li>Visszapillantó tükör
+        <i>Domború / torzításmentes</i>
+      </li>
+      <li>Kormánytáska
+        <i>ez egy fos, ezért ide nem írok semmit :D</i>
+      </li>
+      <li>Kosár
+        <i>Fonott / fémhálós / vászon</i>
+      </li>
+      <li>Stucni
+        <i>Merev <small>Nem állítható</small> / Állítható stucni</i>
+      </li>
+    </ul>
+    <p>A kormányra a legtöbb felsorolt eszköz gond nélkül felszerelhető, de előfordul, hogy nem passzol valami rá. Például: <b>A markolatnak (mint cső) van egy belső átmérője, és ha az kisebb mint a kormánycső vastagsága, akkor nem lehet rátenni. Ugyanez a helyzet az állítható stucnival is. Ilyenkor figyelembe kell venni a méreteket.</b>
+    </p>
+    <p>A stucni szerepe a kerékpár típusoktól függően a testtartással kapcsolatban:</p>
+    <ul>
+      <li>Országúti
+        <i>Fexel rajta (mindig fix a stucni)</i>
+      </li>
+      <li>Trekking
+        <i>Az esetek nagy részében állítható a stucni. A tested 90°-os szöget tart, azaz kényelmesen ülsz mint egy széken.</i>
+      </li>
+      <li>Cross
+        <i>Megoszlik a stucni típusa. Általában nem állítható. A mountainbike-hoz hasonlóan 45°-fokos szöget tartasz de inkább a trekking felé húz a testtartás.</i>
+      </li>
+      <li>Mountainbike
+        <i>Mindig fix a stucni. A testtartásod 45°-os szöget zár.</i>
+      </li>
+    </ul>
+  </details>
+  <details id="valto" class="content">
+    <summary>Váltórendszerek</summary>
+    <p>A váltók típusai:</p>
+    <dl>
+      <dt>Shimano
+        <i>Minőségi sorrendben Tourney szar - Deore és Xt legjobb</i>
+      </dt>
+      <dd>
+        <dl>
+          <dt>Tourney</dt>
+          <dd>Tx</dd>
+          <dd>Ty</dd>
+          <dd>Tz</dd>
+          <dd>Xt</dd>
+          <hr>
+          <dt>Acera</dt>
+          <dt>Alivio</dt>
+          <dt>Altus</dt>
+          <hr>
+          <dt>Deore</dt>
+          <dd>Xt</dd>
+          <dt>Xt</dt>
+        </dl>
+      </dd>
+      <hr>
+      <dt>Sride
+        <i>Ezt a HEAD bringáknál használják inkább</i>
+      </dt>
+      <dd>Középkategória általában. Mivel nem konkrét nevük van, így könnyebb ezt mondani. Mivel sorozatszámmal határozták meg a típusaikat és így azokat nem lehet megjegyezni.</dd>
+      <hr>
+      <dt>És az egyéb <q>Noname</q> szarok mint például a Sunrun váltók.</dt>
+    </dl>
+    <p>Végezetül a sebességfokozatok gyakoriság szerint:</p>
+    <ul>
+      <li>21 <i>3*7</i></li>
+      <li>24 <i>3*8</i></li>
+      <li>27 <i>3*9</i></li>
+      <li>30 <i>3*10</i></li>
+      <hr>
+      <li>18 <i>2*9</i></li>
+      <li>16 <i>2*8</i></li>
+      <hr>
+      <li>10</li>
+      <li>7</li>
+      <li>6</li>
+      <li>3</li>
+      <li>1</li>
+    </ul>
+  </details>
+  <details id="villa" class="content">
+    <summary>Villa</summary>
+    <p>Itt nem sok dolog van ami fontos. De azért ezt sem szabad kihagyni mert lehet jó reklámfogás.
+      <br>
+      Nézzük sorban:<i>Márka, Típus, Állíthatóság.</i>
+    </p>
+    <ul>
+      <li>RockShox <i>Legjobb</i></li>
+      <li>Nexx <i>Jó</i></li>
+      <li>SunTour <i>Jó</i></li>
+      <li>Kilimanjaro <i>Közepes</i></li>
+    </ul>
+    <b>Fontos! A festett rugóvilla <q>például ami fekete színű</q>, a gyengébb kategóriába tartozik. Persze nem mindegyik.</b>
+    <ul>
+      <li>Olaj <i>Hidraulikus</i></li>
+      <li>Levegő</li>
+      <li>Acélrugó</li>
+    </ul>
+    <b>A felsoroltak közül nehéz megmondani, melyik milyen rugó. Ebben a HW Feri tud segíteni.</b>
+    <ul>
+      <li>Nem állítható.
+        <i>Ilyenkor nincs kiálló fogantyú a villa tetején egyik oldalon sem. Legfeljebb <q>Reload</q> feliratot láthatsz.</i>
+      </li>
+      <li>Állítható de csak 2 állásmód van rajta.
+        <i>Zárolt / Kiengedett. Ez általában kék színű fogantyúval van felszerelve minden esetben a menetirány szerinti jobb oldalon. Néha pedig lehet piros színű is.</i>
+      </li>
+      <li>Állítható finom fokozatokban.
+        <i>Ez mindig kék színű. Sok állásmóddal. A tervezők 2 lehetőséget adnak. Vagy kattanó fokazotak vannak, vagy finoman állítható fokozat nélkül csavarodik.</i>
+      </li>
+      <li>Ez utsó pedig a kormányon van.
+        <i>Ez hasonlóan a 2.-hoz, csak Be/Ki kapcsolással bír. A profi bringákon van ilyen általában.</i>
+      </li>
+    </ul>
+  </details>
+  <details id="elsokerek" class="content">
+    <summary>Első kerék</summary>
+    <p>A Hervisben minden kerékpár
+      <i>Erősített Duplafalú felnivel</i> van gyártva.
+      <br>
+      A küllők lehetnek
+      <i>szimetriskusak, vagy aszimetrikusak.</i>
+      <br>
+      Létezik az általános kerék betét rendszer, és az
+      <i>ipari átütéses.</i>
+      <br>
+      Végezetül, a kerékagy.
+      <i>Általános, agydinamós, agymotoros.</i> Alul példával:
+      <br>
+      A kerék el lehet látva
+      <i><q>Reflexcsíkkal</q></i>
+      ami azt jelenti, hogy a gumiköpenyen egy fényvisszaverő csík van felfestve, így nem kell a küllőkre fényvisszaverő küllőprízma.
+    </p>
+    <ul>
+      <li>Általános kerékagy
+        <b>(kb 3-5cm vastag)</b>
+        <i>Lehet gyors-zárral, vagy <q>hagyományosan</q> kulcsos változattal rögzíthető a villához.</i>
+      </li>
+      <li>Agydinamós
+        <b>(kb 8-10cm vastag)</b>
+        <i>Ez egy vastagabb kerékagy a többinél. 2db drót is kilóg a dinamóból persze összekötve. A lámpák ezestben elől/ hátul elem nélkül működnek.</i>
+      </li>
+      <li>Agymotor
+        <b>(kb 15-20cm vastag)</b>
+        <i>Innen is kilóg 2db drót szintén összekötve. Ez nem a lámpák miatt van ott. Elektromos kerékpár esetében ez segít rá a hajtásra.</i>
+      </li>
+    </ul>
+    <p>Ha a keréken a gumiköpeny durva, az nem mindig jelenti azt, hpgy terepre való, de a jobb kerékpárok esetében ez is lehet figyelmi pont.
+      <br>
+      Ellenben! Ha finomabb az erezet mintázata, akkor az minden esetben városba való kerékpár.
+    </p>
+    <p>A kerékpár belsőnél is van 1-2 dolog amit figyelembe kell venni.
+      <br>Pl: Méret, tágulás, szelep.
+    </p>
+    <ul>
+      <li>28</li>
+      <li>26</li>
+      <li>27.5</li>
+      <li>29</li>
+    </ul>
+    <ul>
+      <li>Mitas márkájú gumik. Általában kisebb tartományban tágulnak. Pl: 1.75 - 2.3</li>
+      <li>Continental <small>Contitube</small> ez általában nagyobb tartományban tud tágulni. Pl: 1.45 - 2.5</li>
+    </ul>
+    <ul>
+      <li>Auto <b>Általános</b> (shreder) (40mm vagy a hosszabb változata. Ha egy kerékpár duplafalú felnis, annak a 48mm-es szelep kell!)</li>
+      <li>Presta (francia) <b>Sport</b></li>
+      <li>Dunlop</li>
+    </ul>
+  </details>
+  <details id="vaz" class="content">
+    <summary>Váz</summary>
+    <p>Anyag / kialakítás / titkok</p>
+    <ul>
+      <li>Acél <i>Nehéz, 20-30kg</i></li>
+      <li>Alumínium <i>Átlag 15kg körül</i></li>
+      <li>Carbon <i>Könnyű 13kg alatt</i></li>
+    </ul>
+    <p>A vezetékek <small>fék és váltó</small> a vázzal való kapcsolatban:</p>
+    <ul>
+      <li>Hozzárögzített <i>azaz végigfut rajta - a külsején. Ez lehet alul, felül, vagy elosztva 2 oldalra.</i></li>
+      <li>Rejtett <i>vagyis a vázon belül futnak a vezetékek.</i></li>
+    </ul>
+    <p>Kitámasztó típusok: <i>26-29 méretekben (mind állítható)</i>
+      <br>
+      <i>és 24 - alatti gyerek</i>
+    </p>
+    <ul>
+      <li>Középtámasz
+        <i>nem túl gyakori eset. Gondosan kell választani, mert előfordul, hogy hagynak helyet rá, de ott fut a váltóbowden és így felszereléskor csak sértené.</i>
+      </li>
+      <li>Hátsó-kétCsavaros kitám.
+        <i>Ez gyakrabban fordul elő. Nem lehet elszúrni.</i>
+      </li>
+      <li>Hátsó bilincses támasz
+        <i>Ez minden fajta kerékpárra felmegy. Itt már csak azt kell megjegyezned, hogy gyerek kerókra nem jó a felnőtt mert túl hosszú.</i>
+        <b>Amit javasolok: <q>KTM rear kickstand</q> ez online rendelhető meg, mert általában nincs.
+          <br>
+          Ami pedig mindig van, az az <q>X-fatc duplabilincses hátsó kitám.</q> de ez nem olyan jó mert nincs hozzá gumiGyűrű a KTM-el ellenben. Figyelmeztesd a vevőt ha ilyet ajánlasz.
+        </b>
+        <br>
+        <a href="https://www.hervis.hu/shop/Felszerel%C3%A9s/Ker%C3%A9kp%C3%A1r-kieg%C3%A9sz%C3%ADt%C5%91k/Tartoz%C3%A9kok/KTM/Rear-Kickstand/p/COLOR-1981810" target="_blank">Katt ide! Itt a KTM kitámasztó <q>1981810</q></a>
+      </li>
+    </ul>
+  </details>
+  <details id="nyereg" class="content">
+    <summary>Nyereg</summary>
+    <p>Itt nincs sok infó. A legtöbb nyereg szar. Sportnyeregnek nevezik ezeket. Kemény, keskeny, síkos mind. Sokkal jobb a trekking ülés. Kényelmesebb. Főleg hosszabb túráknál. A sajátmárkás zselés nyergeinket bátran ajánld, de mégjobb ha a <i>Medic</i> márkájú úléseket javasolod.</p>
+    <p>Minden ülés állítható legalább 1 helyen. Pontosabban a nyereg szögét állíthatod. De a sportosabb darabok képesek 2 helyen álltani a szöget.</p>
+  </details>
+  <details id="hatsokerek" class="content">
+    <summary>Hátsó kerék</summary>
+    <p>Az első keréknél már szinte mindent kifejtettem. Ami fontos még, hogy a fogaskerékKoszorú minél szélesebb tartományban mozogjon. Azért fontos ez, mert minél kisebb a legkisebb fogaskerék és minél nagyobb a legnagyobb fogaskerék a koszorún a többi kerékpárhoz képest, annál gyorsabban és annál könnyebben lehet majd hajtani a kerékpárt. Az nem elég önmagában, hogy váltórendszer van a kerékpáron.
+      <br>
+      <br>
+      Az első kerékhez hasonlóan létezik még hátsó meghajtás elektromos kerók esetében. Ilyenkor szintén bumbák nagy a kerékagy mert tartalmazza a motort is.
+      <br>
+      Fontos, hogy 2 fajta váltó rendszer van.
+    </p>
+    <ul>
+      <li>Külső
+        <i>Nyitott, jól látható és sérülékeny ha esel a keróval vagy eldől a helytelen kitám. beállítása miatt. Azonban könnyű szerelni és olcsóbb is.</i>
+      </li>
+      <li>Belső
+        <i>Ez a kerékagy körül van elhelyezve és álló helyzetben is lehet váltani az előzővel ellentétben. Zárt - így nem sérülékeny, nem igényel annyi beállítást, nem megy bele a por sem az eső de ha valami baj akad vele mégis, akkor macerás a javítása.</i>
+      </li>
+    </ul>
+  </details>
+  <details id="fek" class="content">
+    <summary>Fékrendszer</summary>
+    <p>4 fajta létezik. A kormány menüpontban felsoroltam már. Most nézzük a márkákat.</p>
+    <ul>
+      <li>Shimano <i>Legjobb</i></li>
+      <li>Tektro <i>jó</i></li>
+      <li>Zoom <i>jó</i></li>
+    </ul>
+    <p>A legjobb amit reklámoznod kell, a hidraulikus tárcsafék. De a gyakrolatban a bowdenes tárcsa a legjobb. Mert legalább 2-3 de inkább 4-5 helyen lehet finom-hangolni s ennek következtében pontosabban működik.</p>
+  </details>
+  <details id="kieg" class="content">
+    <summary>Kiegészítő termékek</summary>
+    <p>Hatósági kötelező kresz elemek a kerékpáron:</p>
+    <ul>
+      <li>Lámpa <i>min 150m-ről látható</i></li>
+      <li>Csengő</li>
+      <li>Kormánypízma <i>fehér</i></li>
+      <li>Küllőprízma <i>narancssárga, elől 2 de inkább hátul is 2. vagy reflexCsík ami ezüst.</i></li>
+      <li>Hátsó prízma <i>piros, nyeregcsőre, vagy nyeregre, vagy vázra.</i></li>
+      <li>Fékrendszer <i>elől és hátul. egymástól függetlenül működően.</i></li>
+      <li>Lakott területen kívül
+        <dd>Sisak</dd>
+        <dd>Fényvisszaverő mellény</dd>
+      </li>
+    </ul>
+    <p>Ezen felül bőven el lehet adni még:</p>
+    <ul>
+      <li>Táskákat: <i>váz, csomagtartó, nyereg, kormány, háti stb..</i></li>
+      <li>kitámasztó</li>
+      <li>Kulacstartó</li>
+      <li>Kulacs</li>
+      <li>Energia szelet</li>
+      <li>Regeneráló krémek</li>
+      <li>Csomagtartó <i>(3 fajta is van)</i></li>
+      <li>alumínium pedál <i>a műanyag fos</i></li>
+      <li>visszapillantó tükör</li>
+      <li>ruházat <i>nadrág béléssel</i></li>
+      <li>nyereg <i>zselés</i></li>
+      <li>nyereghuzat <i>zselés</i></li>
+    </ul>
+  </details>
+  <footer align="center" style="color:red;">&#169; Molnár István 2023</footer>
+
+  <script type="text/javascript">
+    let int = 8,
+      reload = () => {
+        document.getElementById('variable').innerText = int;
+        if (int == 0) {
+          location.reload();
+        }
+        int--;
+      }
+    //window.setInterval(reload, 1000);
+
+    let elem = document.getElementsByTagName('DETAILS'),
+      len = elem.length,
+      obj = {
+        open: () => {
+          for (let x = 0; x < len; x++) {
+            elem[x].open = true;
+          }
+        },
+        close: () => {
+          for (let x = 0; x < len; x++) {
+            elem[x].open = false;
+          }
+        }
+      }
+
+    obj.open();
+
+  </script>
+</body>
+
+</html>
